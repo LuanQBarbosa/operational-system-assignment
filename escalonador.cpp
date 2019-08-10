@@ -96,17 +96,17 @@ int Escalonador::getEsperaTotal( )
 void Escalonador::printaResultados( )
 {
     if ( modo == 0 )
-        std::cout << "FCFS: ";
+        std::cout << "FCFS ";
     else if ( modo == 2 )
-        std::cout << "SJF: ";
+        std::cout << "SJF ";
     else
-        std::cout << "RR: ";
+        std::cout << "RR ";
 
     float fRetorno = (float)retornoTotal/nProcessos;
     float fResposta = (float)respostaTotal/nProcessos;
     float fEspera = (float)esperaTotal/nProcessos;
 
-    std::cout << fRetorno << " " << fResposta << " " << fEspera << std::endl;
+    printf( "%.1f %.1f %.1f\n", fRetorno, fResposta, fEspera );
 }
 
 void Escalonador::incrementaProcessos( )

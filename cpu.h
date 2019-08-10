@@ -16,7 +16,7 @@ private:
     std::queue<Processo> processos;
 
 public:
-    CPU( int modo, std::queue<Processo> nProcessos, int quantum=0 );
+    CPU( int modo, std::queue<Processo> nProcessos, int quantum );
 
     void executa( );
     void printaResultados( );
